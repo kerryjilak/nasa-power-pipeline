@@ -18,11 +18,11 @@ deployments:
       name: Prefect Cloud
     work_pool:
       name: my-managed-pool
-      schedule:
+    schedules:
        - cron: "0 9 * * 1-5"
-        timezone: Africa/Accra
+         timezone: Africa/Accra
 
-   - name: daily
+  - name: daily
     entrypoint: nasa_power_pipeline/plan_ske.py:nasa_power_plan
     parameters:
       name: Prefect Cloud
